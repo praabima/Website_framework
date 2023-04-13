@@ -36,3 +36,7 @@ Route::group(['namespace' => 'Backend'], function () {
     Route::resource('dashboard', 'DashboardController');
     Route::resource('pendidikan', 'PendidikanController');
 });
+
+Route::get('/session/create', 'SessionController@create');
+Route::get('/session/show', 'SessionController@show');
+Route::get('/session/delete', 'SessionController@delete');
