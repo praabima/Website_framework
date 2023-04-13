@@ -11,6 +11,7 @@
 |
 */
 
+use App\Http\Controllers\MahasiswaController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -37,6 +38,13 @@ Route::group(['namespace' => 'Backend'], function () {
     Route::resource('pendidikan', 'PendidikanController');
 });
 
+//acara 33
+
 Route::get('/session/create', 'SessionController@create');
 Route::get('/session/show', 'SessionController@show');
 Route::get('/session/delete', 'SessionController@delete');
+
+//acara 34
+Route::get('/mahasiswa/{nama}', 'MahasiswaController@index');
+Route::get('/formulir', "MahasiswaController@formulir");
+Route::get('/formulir/proses', 'MahasiswaController@proses');
