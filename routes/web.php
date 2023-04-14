@@ -44,7 +44,11 @@ Route::get('/session/create', 'SessionController@create');
 Route::get('/session/show', 'SessionController@show');
 Route::get('/session/delete', 'SessionController@delete');
 
-//acara 34
+//acara 34 - 35
 Route::get('/mahasiswa/{nama}', 'MahasiswaController@index');
 Route::get('/formulir', "MahasiswaController@formulir");
-Route::get('/formulir/proses', 'MahasiswaController@proses');
+Route::post('/formulir/proses', 'MahasiswaController@proses');
+
+//acara 36
+Route::get('/cobaerror', 'CobaController@index');
+Route::get('/cobaerror/{nama?}', 'CobaController@index');
