@@ -52,3 +52,18 @@ Route::post('/formulir/proses', 'MahasiswaController@proses');
 //acara 36
 Route::get('/cobaerror', 'CobaController@index');
 Route::get('/cobaerror/{nama?}', 'CobaController@index');
+
+//acara 37
+Route::get('/upload', 'UploadController@upload')->name('upload');
+Route::post('/upload/proses', 'UploadController@proses_upload')
+    ->name('upload.proses');
+
+//Acara 38
+Route::post('/upload/resize', 'UploadController@resize_upload')
+    ->name('upload.resize');
+
+//Acara 39
+Route::get('/dropzone', 'UploadController@dropzone')
+    ->name('dropzone');
+Route::get('/dropzone/store', 'UploadController@dropzone_store')
+    ->name('dropzone.store');
